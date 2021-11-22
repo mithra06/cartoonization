@@ -7,3 +7,5 @@ app.add_app("filters", filters.app)
 app.add_app("cartoonify", cartoonify.app)
 app.add_app("toonify",toonify.app)
 app.run()
+
+.listen(process.env.PORT || 5000)
