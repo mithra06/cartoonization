@@ -13,7 +13,7 @@ import os
 import tqdm
 import io
 import base64
-import psycopg2
+
 #st.set_option('deprecation.showfileUploaderEncoding', False)
 
 from app1.gallery import display_gallery
@@ -222,15 +222,7 @@ def app():
 
       
 
-    elif page == "For NERd":
-
-      cur,conn = db_connection()
-      cur.execute("SELECT * from LOG");
-      rows = cur.fetchall()
-      conn.commit()
-      conn.close()
-      df = pd.DataFrame(rows, columns =['timestampStr','inp_type','shape','inference_time','message'])
-      display_stats(df)
+    
     
     else:
       pass
