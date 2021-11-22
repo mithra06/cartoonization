@@ -9,5 +9,5 @@ app.add_app("cartoonify", cartoonify.app)
 app.add_app("toonify",toonify.app)
 app.run()
 
-server.listen(port,()=>{
+app.listen(port,()=>{
   console.log('server is running')});
