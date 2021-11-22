@@ -1,27 +1,26 @@
-
-  import streamlit as st
-  from PIL import Image
-  from datetime import datetime
-  import time
-  import random 
-  import pandas as pd
-  import numpy as np
-  import cv2
-  from cv2 import cvtColor, COLOR_BGR2RGB
-  import tensorflow as tf
-  import os
-  import tqdm
-  import io
-  import base64
-
+import streamlit as st
+from PIL import Image
+from datetime import datetime
+import time
+import random 
+import pandas as pd
+import numpy as np
+import cv2
+from cv2 import cvtColor, COLOR_BGR2RGB
+import tensorflow as tf
+import os
+import tqdm
+import io
+import base64
+import psycopg2
 #st.set_option('deprecation.showfileUploaderEncoding', False)
 
-  from app1.gallery import display_gallery
-  from app1.stats import display_stats
-  from app1 import guided_filter
-  from app1 import network
+from app1.gallery import display_gallery
+from app1.stats import display_stats
+from app1 import guided_filter
+from app1 import network
 
-  def app():
+def app():
     status = False
 
     fail_list = [
@@ -222,8 +221,18 @@
 
       
 
-    
+    elif page == "For NERd":
+
+      cur,conn = db_connection()
+      cur.execute("SELECT * from LOG");
+      rows = cur.fetchall()
+      conn.commit()
+      conn.close()
+      df = pd.DataFrame(rows, columns =['timestampStr','inp_type','shape','inference_time','message'])
+      display_stats(df)
     
     else:
       pass
-    app.run()
+  
+
+    
