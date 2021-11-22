@@ -1,7 +1,7 @@
 import streamlit as st
 from multiapp import MultiApp
 from apps import cartoonify,filters,toonify
-var port = process.env.PORT || 8000
+var port = process.env.PORT || 8080
 
 app = MultiApp()
 app.add_app("filters", filters.app)
