@@ -226,3 +226,5 @@
     
     else:
       pass
+
+    app.run()
