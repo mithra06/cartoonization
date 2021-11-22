@@ -1,9 +1,9 @@
 requests
 streamlit==0.66.0
-pandas==1.0.5
+#pandas==1.0.5
 numpy==1.18.5
-tensorflow
-tqdm==4.41.1
+#tensorflow
+#tqdm==4.41.1
 Pillow==7.2.0
 matplotlib==3.3.2
 opencv-python
