@@ -1,4 +1,4 @@
-%%writefile cartoonify.py
+
 import streamlit as st
 from PIL import Image
 from datetime import datetime
