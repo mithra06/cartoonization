@@ -2,9 +2,10 @@ requests
 streamlit
 pandas
 numpy
-tensorflow-cpu ==1.13.2
+tensorflow-cpu
 tqdm
 Pillow
 matplotlib
 opencv-python-headless
 psycopg2
+tf_slim
