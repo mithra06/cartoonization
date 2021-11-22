@@ -1,7 +1,7 @@
 import tensorflow as tf
 import numpy as np
-import tensorflow.contrib.slim as slim
-
+#import tensorflow.contrib.slim as slim
+import tf_slim as slim
 
 
 def resblock(inputs, out_channel=32, name='resblock'):
