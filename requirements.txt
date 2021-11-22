@@ -2,7 +2,7 @@ requests
 streamlit
 pandas
 numpy
-tensorflow-cpu >=1.13.2
+tensorflow-cpu ==1.13.2
 tqdm
 Pillow
 matplotlib
