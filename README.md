@@ -12,7 +12,7 @@ In filter effects, we have 4 filters which is bilateral, pencil sketch,detail en
 
 
 Inside apps folder , we have these three types
-We are using streamlit app, so we have to run apple.py
+We are using streamlit app, so we have to run streamlit run apple.py
 
 
 
